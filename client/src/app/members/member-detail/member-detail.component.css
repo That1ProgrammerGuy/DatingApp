@@ -13,3 +13,8 @@
     background-color: #fff;
     border-top: none;
 }
+
+.form-control {
+    background-color: transparent; 
+    resize: none;
+}

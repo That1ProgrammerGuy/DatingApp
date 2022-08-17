@@ -24,7 +24,7 @@
             <div class="card-footer">
                 <div class="btn-group d-flex">
                     <button class="btn btn-danger fa fa-heart"> Like</button>
-                    <button class="btn btn-primary">Message</button>
+                    <button class="btn btn-primary fa fa-envelope"> Message</button>
                 </div>
             </div>
         </div>
@@ -32,14 +32,18 @@
     <div class="col-8">
         <tabset class="member-tabset">
             <tab heading='About {{member.knowAs}}'>
-                <h4>Description</h4>
-                <p>{{member.introduction}}</p>
-                <h4>Looking for</h4>
-                <p>{{member.lookingfor}}</p>
+                <h4 class="mt-2">Description</h4>
+                <!-- <p>{{member.introduction}}</p> -->
+                    <textarea class="form-control" [(ngModel)]="member.introduction" name="introduction" rows="12" disabled></textarea>
+                <h4 class="mt-2">Looking for</h4>
+                <!-- <p>{{member.lookingfor}}</p> -->
+                    <textarea class="form-control" [(ngModel)]="member.lookingFor" name="lookingFor" rows="12" disabled></textarea>
+                
             </tab>
             <tab heading='Interests'>
                 <h4>Interests</h4>
-                <p>{{member.introduction}}</p>
+                <!-- <p>{{member.interests}}</p> -->
+                    <textarea class="form-control" [(ngModel)]="member.interests" name="lookingFor" rows="25" disabled></textarea>
             </tab>
             <tab heading='Photos'>
                 <ngx-gallery [options]="galleryOptions" [images]="galleryImages" style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
