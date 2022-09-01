@@ -1,0 +1,8 @@
+.btnedit{
+    background-color: #23689A;
+}
+
+.btnedit:hover{
+    background-color: white;
+    color: #23689A;
+}
