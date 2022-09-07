@@ -71,11 +71,16 @@ namespace API
 
             app.UseAuthorization();
 
+            app.UseDefaultFiles(); //if there is an index.html file in the wwwroot folder, it will be used as the default file
+
+            app.UseStaticFiles(); //if there is a file in the wwwroot folder, it will be used
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<PresenceHub>("hubs/presence");
                 endpoints.MapHub<MessageHub>("hubs/message");
+                endpoints.MapFallbackToController("Index", "FallBack");
             });
         }
     }
