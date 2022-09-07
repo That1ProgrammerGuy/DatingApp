@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Data;
 
 namespace API.Interfaces
 {
@@ -12,6 +13,8 @@ namespace API.Interfaces
         IMessageRepository MessageRepository { get; }
 
         ILikesRepository LikesRepository { get; }
+
+        IPhotoRepository PhotoRepository { get; }
 
         Task<bool> Complete();
 

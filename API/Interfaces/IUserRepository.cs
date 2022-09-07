@@ -14,6 +14,7 @@ namespace API.Interfaces
 
             Task<IEnumerable<AppUser>> GetUsersAsync();
 
+            Task<AppUser> GetUserByPhotoId(int photoId);
             Task<AppUser> GetUserByIdAsync(int id);
 
             Task<AppUser> GetUserByUsernameAsync(string username);
@@ -23,5 +24,7 @@ namespace API.Interfaces
             Task<MemberDto> GetMemberAsync(string username);
 
             Task<string> GetUserGender(string username);
+
+            Task<MemberDto> GetMemberAsync(string username, bool isCurrentUser);
     }
 }
